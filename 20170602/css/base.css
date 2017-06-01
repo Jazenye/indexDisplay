@@ -1,0 +1,29 @@
+.body {
+    margin: 0 auto;
+    text-align: center;
+    width: 440px;
+    height: 480px;
+    background-color: #eee;
+    position: relative;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: #ff0000;
+}
+.content {
+    position: relative;
+}
+img {
+    width: 240px;
+    height: 300px;
+}
+ul,li{
+    width: 190px;
+}
+ul {
+    position: absolute;
+    margin-left: 50%;
+    left: -125px;
+}
