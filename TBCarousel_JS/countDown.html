@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		div{
+			width: 600px;
+			height: 300px;
+			margin: 300px auto;
+			font: 18px/300px 'simsun';
+			color: red;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<script>
+		var div = document.getElementsByTagName("div")[0];
+		var timer = setInterval(foo,1);
+
+		function foo(){
+			var nowTime = new Date();
+			var future = new Date("2018/4/20 23:35:0");
+			var subTime = future.getTime() - nowTime.getTime();
+
+			var day = parseInt(subTime/1000/60/60/24);
+			var hour = parseInt(subTime/1000/60%24);
+			var min = parseInt(subTime/1000/60%60);
+			var s = parseInt(subTime/1000%60);
+
+			var s = s<10?"0"+s:s;
+			var min = min<10?"0"+min:min;
+			var hour = hour<10?"0"+hour:hour;
+			var day = day<10?"0"+day:day;
+
+			if(subTime <= 0){
+				div.innerHTML = "正式开幕!";
+				clearTime(timer);
+				return;
+			}
+
+			div.innerHTML = "距离开幕还有："+day+"天 "+hour+"时 "+min+"分"+s+"秒";
+		}
+	</script>
+</body>
+</html>
