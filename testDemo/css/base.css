@@ -2,7 +2,7 @@
     margin: 0 auto;
     text-align: center;
     width: 440px;
-    height: 480px;
+    height: 640px;
     background-color: #eee;
     position: relative;
 }
@@ -26,4 +26,7 @@ ul {
     position: absolute;
     margin-left: 50%;
     left: -125px;
+}
+ol {
+    margin-left: 95px;
 }
