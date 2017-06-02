@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>searchbutton</title>
+	<style>
+		div,ul,li{
+			padding: 0;
+			margin: 0;
+		}
+		.search{
+			width: 500px;
+			margin: 300px auto;
+		}
+		input[type=text]{
+			width: 400px;
+			height: 20px;
+		}
+		input[type=button]{
+			margin-left: 10px;
+		}
+		ul{
+			width: 402px;
+			border: 1px solid red;
+			border-top:0;
+		}
+		ul li{
+			list-style: none;
+			height: 15px;
+		}
+		ul li:hover{
+			background-color: #f0f0f0;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			var mysql = ["a","ab","abc","aaa","as","asd","aasd"];
+
+			var inp = document.getElementsByTagName("input")[0];
+			var search = document.getElementsByClassName("search")[0];
+
+			inp.oninput = function(){
+				var arr = [];
+				for(var i=0; i<mysql.length; i++){
+					if( !mysql[i].indexOf(this.value) ){
+						arr.push("<li>"+mysql[i]+"</li>");
+					}
+				}
+				if(search.children[2]){
+					search.removeChild(search.children[2]);
+				}
+				if( !(inp.value.length && arr.length) ){
+					return;
+				}
+
+				var ul = document.createElement("ul");
+				ul.innerHTML = arr.join("");
+				search.appendChild(ul);
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="search">
+		<input type="text" />
+		<input type="button" value="搜索" />
+		<!-- <ul>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul> -->
+	</div>
+	
+</body>
+</html>
