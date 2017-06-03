@@ -2,8 +2,8 @@
     margin: 0 auto;
     text-align: center;
     width: 440px;
-    height: 640px;
-    background-color: #eee;
+    height: 690px;
+    background-color: #f6f6f6;
     position: relative;
 }
 a {
@@ -29,4 +29,10 @@ ul {
 }
 ol {
     margin-left: 95px;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: show;
 }
