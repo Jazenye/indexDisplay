@@ -1,0 +1,90 @@
+html, body {
+    height: 100%
+}
+
+/*定义关键帧 与 动画命名*/
+@keyframes spin {
+    from {
+        transform: rotateY(0);
+    }
+    to {
+        /*正负的360度 决定了旋转的方向*/
+        transform: rotateY(-360deg);
+    }
+}
+
+main {
+    height: 100%;
+    /*视觉居中 在最外层设置perspective*/
+    perspective: 1000px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective-origin: center 250px;
+}
+
+.pikachus{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    /*保留3d效果 看看每个面的效果*/
+    transform-style: preserve-3d;
+    /*添加动画效果*/
+    animation: spin 30s linear infinite;
+}
+
+.pikachu:nth-child(1) {
+    transform: rotateY(0) translateZ(225px);
+}
+
+.pikachu:nth-child(2) {
+    transform: rotateY(72deg) translateZ(225px) ;
+}
+
+.pikachu:nth-child(3) {
+    transform: rotateY(144deg) translateZ(225px) ;
+}
+
+.pikachu:nth-child(4) {
+    transform: rotateY(216deg) translateZ(225px) ;
+}
+
+.pikachu:nth-child(5) {
+    transform: rotateY(288deg) translateZ(225px) ;
+}
+
+
+.pikachu.first {
+    background: url(img/1.png) ;
+}
+
+.pikachu.second {
+    background: url(img/2.png)  ;
+}
+
+.pikachu.third {
+    background: url(img/3.png) ;
+}
+
+.pikachu.fourth {
+    background: url(img/4.png) ;
+}
+
+.pikachu.fifth {
+    background: url(img/5.png);
+}
+
+.pikachus .pikachu {
+    width: inherit;
+    height: inherit;
+
+    /*定位  与翻牌子的类似*/
+    position: absolute;
+    background-size: 200px;
+    background-repeat: no-repeat;
+}
+
+.pikachus:hover {
+    cursor: pointer;
+    animation-play-state: paused;
+}
