@@ -1,0 +1,214 @@
+ul{margin: 0;padding: 0;list-style: none;}
+@font-face {
+  font-family: 'iconfont';  /* project id 355870 */
+  src: url('//at.alicdn.com/t/font_idscmwb7mas5g66r.eot');
+  src: url('//at.alicdn.com/t/font_idscmwb7mas5g66r.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_idscmwb7mas5g66r.woff') format('woff'),
+  url('//at.alicdn.com/t/font_idscmwb7mas5g66r.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_idscmwb7mas5g66r.svg#iconfont') format('svg');
+}
+.layout {
+  width: 980px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 10px 0 rgba(0, 0, 0, 0.15);
+  padding-top: 10px;
+}
+
+/*----- header start here ----- */
+header .j {
+  width: 100px;
+  height: 100px;
+  background-color: #060807;
+  border-radius: 50px;
+  color: #fff;
+  text-align: center;
+  font-size: 45px;
+  line-height: 100px;
+  display: inline-block;
+  margin: 0 30px;
+}
+
+header .name-job {
+  display: inline-block;
+  font-size: 25px;
+  padding: 50px 0;
+  font-family: Simsun;
+}
+
+p.name-job > .job {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.thunbnail,
+.info {
+  float:left;
+}
+
+.thunbnail {
+  width: 60%;
+}
+.info {
+  width: 40%;
+}
+
+.info>h3 {
+  border-bottom: 3px solid #000;
+}
+
+.info li span {
+  font-family: 'iconfont';
+  font-style: normal;
+  font-size: 16px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+
+.info li:nth-child(1)>span::before {
+  content: "\e603";
+}
+.info li:nth-child(2)>span::before {
+  content: "\e621";
+}
+.info li:nth-child(3)>span::before {
+  content: "\e602";
+}
+.info li:nth-child(4)>span::before {
+  content: "\e62f";
+}
+
+.clearfix::after {
+  content:'';
+  display: block;
+  clear: both;
+}
+/*----- header end here ----- */
+
+#experience,
+#education,
+footer {
+  width: 92%;
+  margin: 10px auto;
+}
+
+/*----- experience start here ----- */
+h2 {
+  padding-bottom: 10px;
+  width: 420px;
+  border-bottom: 2px solid #ccc;
+}
+
+.items {
+  width: 90%;
+}
+
+.item h3 {
+  margin: 0;
+}
+
+.item h3>span {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.timeline,
+.items {
+  float: left;
+}
+
+.timeline {
+  border-left: 3px solid black;
+  width: 9%;
+  height: 348px;
+  position: relative;
+}
+.timeline span {
+  display: inline-block;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #000;
+  border-radius: 6px;
+  left: -7px;
+  top: 0;
+}
+.timeline span:nth-child(2) {
+  top: 126px;
+}
+.timeline span:nth-child(3) {
+  top: 244px;
+}
+/*----- experience end here ----- */
+
+
+/*----- education start here ----- */
+#education .timeline {
+  height: 268px;
+}
+
+#education .items .item>span {
+  color: #bbb;
+}
+
+#education .timeline span:nth-child(2) {
+  top: 147px;
+}
+/*----- education end here ----- */
+
+
+/*----- footer start here ----- */
+.extra,
+.skills {
+  width: 300px;
+}
+.extra,
+.icon {
+  float: left;
+}
+.skills,
+.extra .items {
+  float: right;
+}
+
+.skills h2{
+  width: 100%;
+}
+
+.icon {
+  width: 25px;
+  height: 200px;
+  position: relative;
+}
+
+.icon span::before {
+  position: absolute;
+  font-family: 'iconfont';
+  content: '\e60f';
+  left: 0;
+  font-size: 18px;
+  font-weight: 600;
+  top: 3px;
+}
+
+.icon span:nth-child(2)::before {
+  top: 102px;
+}
+
+.skills ul {
+  width: 50%;
+  float: left;
+}
+
+.skills ul li {
+  margin-bottom: 40px;
+}
+
+.skills ul li>span::before{
+  display: inline-block;
+  font-family: 'iconfont';
+  content: '\e60f';
+  width: 50px;
+}
+/*----- footer end here ----- */
+
