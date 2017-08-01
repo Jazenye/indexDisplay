@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX</title>
+    <style>
+        input {
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ct">
+        <h1>AJAX</h1>
+        <p>Here is the content ready to replace </p>
+        <input type="button" value="Click">
+    </div>
+
+    <script>
+        var p = document.querySelector('.ct p');
+        document.querySelector('input').addEventListener("click",function(){
+            var ajaxObj = new XMLHttpRequest();
+            ajaxObj.open("get", "ajax.php");
+            ajaxObj.send();
+            ajaxObj.onreadystatechange = function(){
+                if(ajaxObj.readyState==4&&ajaxObj.status==200){
+                    p.innerHTML = ajaxObj.responseText;
+                }else {
+                    p.innerHTML = "request is sending & waiting to change"
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>
