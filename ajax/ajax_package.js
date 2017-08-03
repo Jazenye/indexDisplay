@@ -28,3 +28,34 @@ function ajax_tool(url, data, method, success){
         }
     };
 }
+
+
+/*
+* 对工具函数进行进一步封装，使得其可以不考虑参数的顺序
+* 但是在传递的时候就需要使用对象的方式
+* 例：
+* { method:"post", url:"ajax.php"}
+*/
+function ajax_top_tool(option){
+    var ajax = new XMLHttpRequest();
+    if(option.method == "get"){
+        if(option.data)
+            url += "?" + option.data;
+        ajax.open(option.method, option.url);
+        ajax.send();
+    }else if(option.method == "post"){
+        ajax.open(option.method, option.url);
+        ajax.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        if(option.data)
+            ajax.send(option.data);
+        else
+            ajax.send();
+    }else
+        return;
+
+    ajax.onreadystatechange = function(){
+        if(ajax.readyState == 4 && ajax.status == 200){
+            option.success(ajax.responseText);
+        }
+    };
+}
