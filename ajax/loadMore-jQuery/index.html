@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>loadmore News</title>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+    <style>
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .ct li {
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .ct li:hover {
+            background-color: #008000;
+            color: #fff;
+        }
+
+        .loadmore {
+            box-sizing: border-box;
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+            border: 1px solid #e27272;
+            background-color: #fff;
+            color: #e27272; 
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+            width: 90px;
+            height: 45px;
+        }
+        .loadmore img {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="ct">
+        <li>内容1</li>
+        <li>内容2</li>
+    </ul>
+    <button class="loadmore">加载更多</button>
+    <script src="loadmore.js"></script>
+</body>
+
+</html>
