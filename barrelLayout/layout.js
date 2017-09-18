@@ -74,6 +74,7 @@ Barrel.prototype = {
             imgCt.classList.add("img-box");
 
             let childImg = ele.target;
+            // 改变高度之后， 宽度自适应更改
             childImg.style.height = newHeight + "px";
             imgCt.appendChild(childImg);
             imgRow.appendChild(imgCt);
