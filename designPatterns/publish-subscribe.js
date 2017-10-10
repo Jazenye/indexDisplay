@@ -1,3 +1,8 @@
+/**
+ * 发布订阅模式，又称观察者模式。应该是最常用的模式之一
+ * 这种模式可以很好的实现两个模块只见的解耦
+ */
+
 var EventCenter = (function(){
     var events = {};
     function on(evt, handler){
