@@ -1,0 +1,74 @@
+div,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 410px;
+    height: 410px;
+    margin: 100px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.big {
+    width: 410px;
+    height: 410px;
+    position: absolute;
+    top: 0;
+    left: 440px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.mask {
+    width: 205px;
+    height: 205px;
+    background: rgba(255, 255, 0, 0.4);    /* #3d6ece */
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: move;
+}
+
+.small {
+    position: relative;
+    width: 410px;
+    height: 410px; 
+    background: url("../img/123-mini.jpg") no-repeat;
+    background-size: contain;
+}
+
+.local {
+    border: 1px solid rgb(231, 121, 121);
+    margin-left: 100px;
+    width: 400px;
+    text-align: center;
+}
+
+.local p {
+    width: 200px; 
+    margin: 0 auto;
+    /* border: 1px solid black; */
+    padding: 5px;
+}
+
+.local p:nth-child(2),
+.local p:nth-child(3){
+    text-align: left;
+}
+
+.local p span {
+    display: inline-block;
+    width: 50px;  
+    margin-left: 50px;
+}
+
+.show {
+    display: show;
+}
+.hide {
+    display: none;
+}
