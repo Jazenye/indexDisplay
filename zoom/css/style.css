@@ -22,15 +22,19 @@ li {
     border: 1px solid #ccc;
     overflow: hidden;
 }
-
-.mask {
+ 
+.mask { 
     width: 205px;
     height: 205px;
-    background: rgba(255, 255, 0, 0.4);    /* #3d6ece */
+    /* background: rgba(255, 255, 0, 0.4);    */ 
+    background-image: radial-gradient(#7ca5ec 30%, transparent 0),
+                    radial-gradient(#7ca5ec 30%, transparent 0);
+    background-size: 3px 3px;
+    background-position: 0 0, 3px 3px;
     position: absolute;
     top: 0;
     left: 0;
-    cursor: move;
+    cursor: move; 
 }
 
 .small {

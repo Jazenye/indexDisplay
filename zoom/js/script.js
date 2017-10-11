@@ -8,21 +8,6 @@ function hide(ele) {
     ele.classList.remove("show");
 }
 
-// 缓动框架封装。 类似jQuery的animate
-function animate(ele, target) {
-    clearInterval(ele.timer);
-    ele.timer = setInterval(function () {
-        var step = (target - ele.offsetTop) / 10;
-        step = step > 0 ? Math.ceil(step) : Math.floor(step);
-        ele.style.top = ele.offsetTop + step + "px";
-        console.log(1);
-        if (Math.abs(target - ele.offsetTop) < Math.abs(step)) {
-            ele.style.top = target + "px";
-            clearInterval(ele.timer);
-        }
-    }, 25);
-}
-
 // 开始封装自己的scrollTop
 function scroll() {
     if (window.pageYOffset != null) { // ie9+ 高版本浏览器

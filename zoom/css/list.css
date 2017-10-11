@@ -1,0 +1,22 @@
+li {
+    list-style: none;
+}
+
+.items li {
+    float: left;   
+    margin: 10px; 
+}
+
+.items li>img {
+    width: 58px;
+}
+
+.items .active {
+    border: 2px solid black;
+}
+
+ul.items {
+    display: inline-block; 
+    margin-left: 100px;
+    margin-top: -70px;
+}
