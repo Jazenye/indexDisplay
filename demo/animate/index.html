@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>animate Demo</title>
+    <style>
+        .start {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            width: 320px;
+        }
+
+        .start img {
+            /* 消除img 之间的空隙 */
+            display: block;
+        }
+
+        .start span {
+            display: block;
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            /* border: 1px solid red; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="start">
+        <span class="close"></span>
+        <div class="img-ct">
+            <img src="img/up.png" alt="">
+        </div>
+        <div class="img-ct">
+            <img src="img/down.png" alt="">
+        </div>
+    </div>
+
+    <script src="animate.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
