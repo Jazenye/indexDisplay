@@ -40,3 +40,26 @@ class Promise {
         return this;
     }
 }
+
+var p = new Promise();
+
+function foo(){
+    console.log('1. foo');
+    setTimeout(function(){
+        p.resolve('data1')
+    }, 1000)
+    return p;
+}
+
+function bar(result){
+    console.log("2. bar :", result);
+    setTimeout(function(){
+        p.resolve('data2')
+    }, 2000);
+}
+
+function final(result){
+    console.log('Finally:', result);
+} 
+
+foo().then(bar ).then(final)
