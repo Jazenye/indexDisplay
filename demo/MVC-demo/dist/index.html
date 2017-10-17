@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Webpack-demos</title>
+  </head>
+  <body>
+    <div class="modules">
+      <div class="module1">
+      </div>
+      <div class="module2">
+      </div>
+      <div class="module3">
+        <input type="text" name="number2">
+        <button name="button2">点我</button>
+      </div>
+
+    </div>
+    <script id="module2Template" type="text/x-handlerbars">
+      <hr>
+      <div>{{number}}</div>
+      <hr>
+      <button name="increase">加</button>
+      <hr>
+      <button name="decrease">减</button>
+    </script>
+    <script type="text/javascript" src="bundle.js"></script></body>
+</html>
