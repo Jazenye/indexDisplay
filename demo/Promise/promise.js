@@ -39,7 +39,7 @@ class Promise {
         return this;
     }
 
-    // 异常处理, 不在调用后续方法
+    // 执行异常处理函数, 直接返回
     catch(onfail){
         this.oncatch = onfail;
         return this;
@@ -67,4 +67,8 @@ function final(result){
     console.log('Finally:', result);
 } 
 
-foo().then(bar).then(final)
+function err(){
+    console.log("Error!");
+}
+
+foo().then(bar).then(final).catch(err)
