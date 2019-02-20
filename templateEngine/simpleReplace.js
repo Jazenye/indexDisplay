@@ -6,6 +6,7 @@ function stringFormat(str){
     let regexp = /\{(\d+)\}/g;
 
     // 替换值是一个每次匹配都要调用的函数 
+    // 将字符串中的 {n} 替换成 params[n]
     str = str.replace(regexp, function(){
         /* 类数组对象，
         * 参数0： 匹配到的内容， 例： {0}

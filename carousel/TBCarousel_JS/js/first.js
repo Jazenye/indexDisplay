@@ -74,7 +74,7 @@ window.onload = function(){
 	/* 图片移动的函数 */
 	function animate(ele,target){
 		clearInterval(ele.timer);
-		var speed = target>ele.offsetLeft?30:-30;
+		var speed = target>ele.offsetLeft?3:-3;
 		ele.timer = setInterval(function(){
 			var val = target - ele.offsetLeft;
 			ele.style.left = ele.offsetLeft + speed + "px";
@@ -82,6 +82,6 @@ window.onload = function(){
 				ele.style.left = target+"px";
 				clearInterval(ele.timer);
 			}
-		},4)
+		}, 50)
 	}
 }
